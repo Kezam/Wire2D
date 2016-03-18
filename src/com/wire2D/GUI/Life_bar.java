@@ -35,7 +35,8 @@ public class Life_bar {
     }
 
     public void update(GameContainer gc, StateBasedGame s, int i, Statistics stats) throws SlickException {
-        //this
+        this.health = stats.Health;
+        lifeBar.setWidth(2*health);
     }
 
 }

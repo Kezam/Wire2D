@@ -38,6 +38,13 @@ public class Movement {
         } else if (gc.getInput().isKeyDown(Input.KEY_DOWN)) {
             test(mapa, player, i, 0, 1, mapa.mBox);
         }
+
+        if(gc.getInput().isKeyPressed(Input.KEY_SPACE))
+        {
+            System.err.println("HP gracza:" + mapa.mPlayer.statistics.Health);
+            mapa.mPlayer.statistics.Health -= 1;
+            System.err.println("HP gracza:" + mapa.mPlayer.statistics.Health);
+        }
         player.update(gc, s, i);
     }
 
