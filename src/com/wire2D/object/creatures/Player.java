@@ -2,29 +2,28 @@ package com.wire2D.object.creatures;
 
 import com.wire2D.Resource;
 import com.wire2D.object.Base;
+import com.wire2D.object.Item;
 import com.wire2D.statistics.Statistics;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
 
-/**
- * Created by Mazek on 2016-03-13.
- */
+import java.util.ArrayList;
+
 public class Player extends Base {
 
+    ArrayList<Item> content;
+
     public Player() {
-        setImage(Resource.getSpriteImage("player", 0, 0));
+        mImage = Resource.getSpriteImage("player", 0, 0);
         position = new Vector2f();
         punkt = new Circle(position.getX(), position.getY(), 1);
         statistics = new Statistics(100,10,10,10);
-    }
 
-    public void setImage(Image image) {
-        mImage = image;
+        content = new ArrayList<>();
     }
 
     public void init(GameContainer gc, StateBasedGame s) throws SlickException {

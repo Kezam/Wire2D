@@ -49,7 +49,7 @@ public class Movement {
         if (x == 0) {
             if (Box != null)
                 if (y == -1) {
-                    player.setImage(Resource.getSpriteImage("player", 0, 3));
+                    player.mImage = Resource.getSpriteImage("player", 0, 3);
                     pos.set(pos.getX(), pos.getY() - droga);
                     player.punkt.setLocation(pos.getX(), pos.getY() - droga);
                     for (Box xD : Box) {
@@ -63,7 +63,7 @@ public class Movement {
                     }
                 }
             if (y == 1) {
-                player.setImage(Resource.getSpriteImage("player", 0, 0));
+                player.mImage = Resource.getSpriteImage("player", 0, 0);
                 pos.set(pos.getX(), pos.getY() + droga);
                 player.punkt.setLocation(pos.getX(), pos.getY() + droga);
                 assert Box != null;
@@ -80,7 +80,7 @@ public class Movement {
         } else {
             if (Box != null) {
                 if (x == -1) {
-                    player.setImage(Resource.getSpriteImage("player", 0, 1));
+                    player.mImage = Resource.getSpriteImage("player", 0, 1);
                     pos.set(pos.getX() - droga, pos.getY());
                     player.punkt.setLocation(pos.getX() - droga, pos.getY());
                     for (Box xD : Box) {
@@ -95,7 +95,7 @@ public class Movement {
                 }
 
                 if (x == 1) {
-                    player.setImage(Resource.getSpriteImage("player", 0, 2));
+                    player.mImage = Resource.getSpriteImage("player", 0, 2);
                     pos.set(pos.getX() + droga, pos.getY());
                     player.punkt.setLocation(pos.getX() + droga, pos.getY());
                     for (Box xD : Box) {
