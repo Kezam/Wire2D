@@ -72,7 +72,8 @@ public class Map {
     }
 
     public void update(GameContainer gc, StateBasedGame s, int i) throws SlickException {
-
+        mPlayer.update(gc, s, i);
+        chicken.update(gc, s, i);
     }
 
     private ArrayList<Box> fillArrayBox(TiledMap map, int objectLayer, Player player) {

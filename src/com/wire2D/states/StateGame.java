@@ -40,7 +40,7 @@ public class StateGame extends BasicGameState {
         if (gc.getInput().isKeyPressed(Input.KEY_ESCAPE)) {
             s.enterState(States.MENU);
         }
-        ObjectMap.mPlayer.update(gc, s, i);
+        ObjectMap.update(gc, s, i);
         Ctrl_mov.update(gc, s, i, ObjectMap);
     }
 }
