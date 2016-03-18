@@ -2,6 +2,7 @@ package com.wire2D.object.creatures;
 
 import com.wire2D.Resource;
 import com.wire2D.object.Base;
+import com.wire2D.statistics.Statistics;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -19,6 +20,7 @@ public class Player extends Base {
         setImage(Resource.getSpriteImage("player", 0, 0));
         position = new Vector2f();
         punkt = new Circle(position.getX(), position.getY(), 1);
+        statistics = new Statistics(100,10,10,10);
     }
 
     public void setImage(Image image) {

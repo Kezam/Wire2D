@@ -1,5 +1,6 @@
 package com.wire2D.states;
 
+import com.wire2D.GUI.Life_bar;
 import com.wire2D.object.Map;
 import com.wire2D.operations.Movement;
 import com.wire2D.utis.States;
@@ -17,6 +18,7 @@ public class StateGame extends BasicGameState {
 
     public Map ObjectMap;
     public Movement Ctrl_mov;
+    public Life_bar lifeBar_GUI;
 
     @Override
     public int getID() {
@@ -27,12 +29,14 @@ public class StateGame extends BasicGameState {
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
         ObjectMap = new Map("shop_place");
         Ctrl_mov = new Movement(ObjectMap.mPlayer);
+        lifeBar_GUI = new Life_bar(100);
     }
 
     @Override
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
 
         ObjectMap.render(gc, sbg, g);
+        lifeBar_GUI.render(gc, sbg, g);
     }
 
     @Override
@@ -42,5 +46,7 @@ public class StateGame extends BasicGameState {
         }
         ObjectMap.update(gc, s, i);
         Ctrl_mov.update(gc, s, i, ObjectMap);
+        lifeBar_GUI.update(gc, s, i, ObjectMap.mPlayer.statistics);
+
     }
 }

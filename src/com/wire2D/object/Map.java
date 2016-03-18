@@ -19,6 +19,7 @@ public class Map {
     public Player mPlayer;
     public Mob chicken;
 
+
     public ArrayList<Box> mBox;
 
     public Map(String path) throws SlickException {
@@ -86,6 +87,7 @@ public class Map {
                 if (property.equals("true")) {
                     boox.add(new Box(i * 32, j * 32, "blocked", 0, "null"));
                 }
+
                 property = map.getTileProperty(id, "enter", "false");
                 if (property.equals("true")) {
                     property = map.getTileProperty(id, "index", "null");
