@@ -9,9 +9,6 @@ import org.newdawn.slick.SpriteSheet;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Mazek on 2016-03-13.
- */
 public class Resource {
 
     private static Map<String, Image> images;
@@ -25,6 +22,8 @@ public class Resource {
         sounds = new HashMap<String, Sound>();
 
         try {
+            images.put("chest", loadImage("res/object/containers/chest.png"));
+
             sprites.put("player", loadSprite("res/object/creatures/player/player.png", Tile.SIZE_PLAYER_X, Tile.SIZE_PLAYER_Y));
             sprites.put("chicken", loadSprite("res/object/creatures/mob/chicken.png", 70, 72));
         } catch (SlickException e) {

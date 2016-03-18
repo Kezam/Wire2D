@@ -4,7 +4,6 @@ import com.wire2D.Resource;
 import com.wire2D.object.Base;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Vector2f;
@@ -12,14 +11,10 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class Mob extends Base {
 
-    public Mob(String tile, Vector2f pos) {
-        setImage(Resource.getSpriteImage(tile, 0, 0));
-        position = pos;
+    public Mob() {
+        mImage = Resource.getSpriteImage("chicken", 0, 0);
+        position = new Vector2f();
         punkt = new Circle(position.getX(), position.getY(), 1);
-    }
-
-    public void setImage(Image image) {
-        mImage = image;
     }
 
     public void init(GameContainer gc, StateBasedGame s) throws SlickException {
