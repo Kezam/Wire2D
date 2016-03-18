@@ -10,14 +10,11 @@ import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
 
-/**
- * Created by Mazek on 2016-03-13.
- */
 public class Mob extends Base {
 
-    public Mob() {
-        setImage(Resource.getSpriteImage("chicken", 0, 0));
-        position = new Vector2f();
+    public Mob(String tile, Vector2f pos) {
+        setImage(Resource.getSpriteImage(tile, 0, 0));
+        position = pos;
         punkt = new Circle(position.getX(), position.getY(), 1);
     }
 
