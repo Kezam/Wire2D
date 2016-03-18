@@ -41,9 +41,9 @@ public class Movement {
 
         if(gc.getInput().isKeyPressed(Input.KEY_SPACE))
         {
-            System.err.println("HP gracza:" + mapa.mPlayer.statistics.Health);
-            mapa.mPlayer.statistics.Health -= 1;
-            System.err.println("HP gracza:" + mapa.mPlayer.statistics.Health);
+            System.err.println("HP gracza:" + mapa.mPlayer.statistics.aHealth);
+            mapa.mPlayer.statistics.aHealth -= 1;
+            System.err.println("HP gracza:" + mapa.mPlayer.statistics.aHealth);
         }
         player.update(gc, s, i);
     }

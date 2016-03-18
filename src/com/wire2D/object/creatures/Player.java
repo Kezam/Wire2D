@@ -21,7 +21,7 @@ public class Player extends Base {
         mImage = Resource.getSpriteImage("player", 0, 0);
         position = new Vector2f();
         punkt = new Circle(position.getX(), position.getY(), 1);
-        statistics = new Statistics(100,10,10,10);
+        statistics = new Statistics(70,100,8,10,10,10);
 
         content = new ArrayList<>();
     }
