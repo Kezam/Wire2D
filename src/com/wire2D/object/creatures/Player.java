@@ -10,6 +10,9 @@ import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class Player extends Base {
 
     public Player() {

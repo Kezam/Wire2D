@@ -12,6 +12,9 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Mazek on 2016-03-14.
+ */
 public class Movement {
 
     private Player player;

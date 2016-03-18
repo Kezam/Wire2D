@@ -9,6 +9,9 @@ import org.newdawn.slick.tiled.TiledMap;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class Map {
     public TiledMap map;
     public Player mPlayer;

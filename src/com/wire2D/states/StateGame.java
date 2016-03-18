@@ -10,6 +10,9 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class StateGame extends BasicGameState {
 
     public Map ObjectMap;

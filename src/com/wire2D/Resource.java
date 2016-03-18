@@ -9,6 +9,9 @@ import org.newdawn.slick.SpriteSheet;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class Resource {
 
     private static Map<String, Image> images;

@@ -1,5 +1,8 @@
 package com.wire2D.utis;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class Tile {
 
     public static final int SIZE_PLAYER_X = 32;

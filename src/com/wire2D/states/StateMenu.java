@@ -7,6 +7,9 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+/**
+ * Created by Mazek on 2016-03-13.
+ */
 public class StateMenu extends BasicGameState {
 
     Image b_return;

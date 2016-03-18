@@ -9,7 +9,9 @@ import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.state.StateBasedGame;
 
-
+/**
+ * Created by Mazek on 2016-03-16.
+ */
 public class Box {
     public Rectangle box;
     public String property;
