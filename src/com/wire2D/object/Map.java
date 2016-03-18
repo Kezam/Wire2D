@@ -5,6 +5,7 @@ import com.wire2D.object.creatures.Player;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -24,7 +25,7 @@ public class Map {
     public Map(String path) throws SlickException {
         map = new TiledMap("res/map/" + path + ".tmx", "res/map");
         mPlayer = new Player();
-        chicken = new Mob();
+        chicken = new Mob("chicken", new Vector2f(20 * 32, 15  * 32));
 
         int objectLayer = map.getLayerIndex("enter_block");
         mBox = new ArrayList<Box>();
