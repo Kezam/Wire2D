@@ -1,5 +1,6 @@
 package com.wire2D.object;
 
+import com.wire2D.object.creatures.Mob;
 import com.wire2D.object.creatures.Player;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -14,13 +15,16 @@ import java.util.ArrayList;
  */
 public class Map {
     public TiledMap map;
+
     public Player mPlayer;
+    public Mob chicken;
 
     public ArrayList<Box> mBox;
 
     public Map(String path) throws SlickException {
         map = new TiledMap("res/map/" + path + ".tmx", "res/map");
         mPlayer = new Player();
+        chicken = new Mob();
 
         int objectLayer = map.getLayerIndex("enter_block");
         mBox = new ArrayList<Box>();
@@ -28,6 +32,7 @@ public class Map {
         mBox = fillArrayBox(map, objectLayer, mPlayer);
 
         mPlayer.position.set(16 * 32, 17 * 32);
+        chicken.position.set(20 * 32, 17 * 32);
     }
 
     public void changemap(String path, int index) throws SlickException {
@@ -60,6 +65,7 @@ public class Map {
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         map.render(0, 0);
         mPlayer.render(gc, sbg, g);
+        chicken.render(gc, sbg, g);
         for (Box xD : mBox) {
             xD.render(gc, sbg, g, mPlayer.punkt);
         }

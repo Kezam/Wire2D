@@ -26,6 +26,7 @@ public class Resource {
 
         try {
             sprites.put("player", loadSprite("res/object/creatures/player/player.png", Tile.SIZE_PLAYER_X, Tile.SIZE_PLAYER_Y));
+            sprites.put("chicken", loadSprite("res/object/creatures/mob/chicken.png", 70, 72));
         } catch (SlickException e) {
             e.printStackTrace();
         }
