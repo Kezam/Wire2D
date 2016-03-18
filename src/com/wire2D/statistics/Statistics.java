@@ -5,12 +5,12 @@ package com.wire2D.statistics;
  */
 public class Statistics {
 
-    public double Health;
-    public double Mana;
-    public double Strength;
-    public double Defense;
+    public float Health;
+    public float Mana;
+    public float Strength;
+    public float Defense;
 
-    public Statistics(double health, double mana, double strength, double defense){
+    public Statistics(float health, float mana, float strength, float defense){
         this.Health = health;
         this.Mana = mana;
         this.Strength = strength;
