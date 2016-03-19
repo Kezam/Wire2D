@@ -29,16 +29,8 @@ public class Interaction {
         posX = Mouse.getX();
         posY = Window.HEIGHT - Mouse.getY();
 
-//        if (posX > posY) {
-//             Interraction with self
-//        }
-//
-//        if (posX > posY) {
-//             Interraction with mob
-//        }
-//
-//        if (posX > posY) {
-//             Interraction with chest
-//        }
+        if (Mouse.isButtonDown(0)) {
+
+        }
     }
 }
