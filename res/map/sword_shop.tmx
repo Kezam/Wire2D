@@ -9,6 +9,13 @@
     <property name="map" value="shop_place"/>
    </properties>
   </tile>
+  <tile id="1">
+   <properties>
+    <property name="enter" value="true"/>
+    <property name="index" value="2"/>
+    <property name="map" value="cave_sword_shop"/>
+   </properties>
+  </tile>
   <tile id="9">
    <properties>
     <property name="blocked" value="true"/>
@@ -20,13 +27,19 @@
     <property name="spawn" value="true"/>
    </properties>
   </tile>
+  <tile id="16">
+   <properties>
+    <property name="index" value="2"/>
+    <property name="spawn" value="true"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="26" name="base_txt" tilewidth="32" tileheight="32" tilecount="2016" columns="32">
   <image source="base_txt.png" width="1024" height="2016"/>
  </tileset>
  <layer name="enter_block" width="40" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGP6ACwceaIDsDmxuGkh3kmIvvd1Ijn30ciMl9tDDjZS6j5ZuxGU2Kfl3INxHL/20NH8opD1uajkEjx0DoZdedtAj/Q3nMBzoOkSADD20AoO5fYBsLzJmhOLB1g4cyQAAc1Yg1IAMAAA=
+   H4sIAAAAAAAAC2NgGP6ACw0zQemBBjD3oLMFsYjRG5BiL73dSI599HIjJfbQw42Uuo+WbsRlNnr+xeeOgXAfvfTT0vyhkPa4qeUQPHYMhF562UGP9Decw3Aw1yGDoQ4WIEEtPQB6fcEIxcTUI6OAPgAAPb26hIAMAAA=
   </data>
  </layer>
  <layer name="Warstwa Kafelków 1" width="40" height="20" visible="0">

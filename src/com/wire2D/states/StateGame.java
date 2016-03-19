@@ -55,6 +55,5 @@ public class StateGame extends BasicGameState {
         ObjectMap.update(gc, s, i);
         Ctrl_mov.update(gc, s, i, ObjectMap);
         GUI.update(gc, s, i, ObjectMap.mPlayer.statistics);
-        action.update(gc, s, i);
     }
 }

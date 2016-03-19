@@ -11,32 +11,34 @@ import org.newdawn.slick.state.StateBasedGame;
 /**
  * Created by Mazek on 2016-03-18.
  */
-
-public class Mana_bar {
-
-    private float mana;
+class Mana_bar {
+    private float aMana;
+    private float cMana;
     private Rectangle manaBar;
-    private Rectangle manaBar_frame;
+    private Rectangle manaBar_freame;
 
-    public Mana_bar(float mana, float maxMana){
-        this.mana = mana;
-        this.manaBar_frame = new Rectangle(20, 690, 200, 20);
-        this.manaBar = new Rectangle(20, 690, 2 * mana, 20);
+    Mana_bar(float mana, float maxMana){
+        this.aMana = mana;
+        this.cMana = maxMana;
+        this.manaBar_freame = new Rectangle(20,690,200,20);
+        this.manaBar = new Rectangle(20,690,0,20);
     }
 
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-        //g.drawString();
         g.setColor(Color.blue);
         g.fill(manaBar);
         g.draw(manaBar);
 
         g.setColor(Color.white);
-        g.draw(manaBar_frame);
+        g.draw(manaBar_freame);
+
+        g.drawString("MP: " + aMana + "/" + cMana, 20,690);
     }
 
     public void update(GameContainer gc, StateBasedGame s, int i, Statistics stats) throws SlickException {
-        this.mana = stats.aHealth;
-        manaBar.setWidth(2*mana);
+        this.aMana = stats.aMana;
+        this.cMana = stats.maxMana;
+        manaBar.setWidth(200*(aMana/cMana));
     }
 }
