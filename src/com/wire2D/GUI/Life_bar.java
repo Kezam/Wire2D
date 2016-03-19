@@ -14,6 +14,7 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 class Life_bar {
 
+    //zmienne
     private float aHealth;
     private float cHealth;
     private Rectangle lifeBar;
