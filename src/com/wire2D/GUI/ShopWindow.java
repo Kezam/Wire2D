@@ -14,8 +14,8 @@ public class ShopWindow {
     private Image buyButton;
     private Image tradeButton;
 
-    public void ShopWindow() throws SlickException {
-        this.mainWindow = new Rectangle(240, 660, 10, 10);
+    public ShopWindow() throws SlickException {
+        this.mainWindow = new Rectangle(10, 10, 640, 480);
         this.sellButton = new Image("res/menu/shop_buttons/sellShop.png");
         this.buyButton = new Image("res/menu/shop_buttons/buyShop.png");
         this.tradeButton = new Image("res/menu/shop_buttons/tradeShop.png");
@@ -23,8 +23,11 @@ public class ShopWindow {
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         g.setColor(Color.red);
-        g.fill(this.mainWindow);
-        g.draw(this.mainWindow);
+        g.fill(mainWindow);
+        g.draw(mainWindow);
+
+        //g.draw(new Rectangle(10, 10, 640, 480));
+
     }
 
 }

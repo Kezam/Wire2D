@@ -17,7 +17,7 @@ public class GUI {
     //to ponizej do usunięcia
     public ShopWindow shopWindow;
 
-    public GUI(Statistics stats){
+    public GUI(Statistics stats) throws SlickException{
         this.lifeBar = new Life_bar(stats.aHealth, stats.maxHealth);
         this.manaBar = new Mana_bar(stats.aMana, stats.maxMana);
         this.shopWindow = new ShopWindow();
