@@ -1,7 +1,6 @@
 package com.wire2D.states;
 
 import com.wire2D.GUI.GUI;
-import com.wire2D.GUI.Life_bar;
 import com.wire2D.object.Map;
 import com.wire2D.operations.Movement;
 import com.wire2D.utis.States;
@@ -15,6 +14,7 @@ import org.newdawn.slick.state.StateBasedGame;
 /**
  * Created by Mazek on 2016-03-13.
  */
+
 public class StateGame extends BasicGameState {
 
     public Map ObjectMap;
@@ -28,6 +28,7 @@ public class StateGame extends BasicGameState {
 
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
+
         ObjectMap = new Map("shop_place");
         Ctrl_mov = new Movement(ObjectMap.mPlayer);
         GUI = new GUI(ObjectMap.mPlayer.statistics);
@@ -42,12 +43,13 @@ public class StateGame extends BasicGameState {
 
     @Override
     public void update(GameContainer gc, StateBasedGame s, int i) throws SlickException {
+
         if (gc.getInput().isKeyPressed(Input.KEY_ESCAPE)) {
             s.enterState(States.MENU);
         }
+
         ObjectMap.update(gc, s, i);
         Ctrl_mov.update(gc, s, i, ObjectMap);
         GUI.update(gc, s, i, ObjectMap.mPlayer.statistics);
-
     }
 }

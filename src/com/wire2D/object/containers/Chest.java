@@ -12,13 +12,17 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Khaffel on 2016-03-17.
+ */
+
 public class Chest extends Base {
 
     ArrayList<Item> content;
 
-    public Chest() {
+    public Chest(Vector2f vector) {
         mImage = Resource.getImage("chest");
-        position = new Vector2f();
+        position = vector;
         punkt = new Circle(position.getX(), position.getY(), 1);
 
         content = new ArrayList<>();

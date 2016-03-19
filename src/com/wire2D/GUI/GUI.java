@@ -1,7 +1,6 @@
 package com.wire2D.GUI;
 
 import com.wire2D.statistics.Statistics;
-import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -10,7 +9,9 @@ import org.newdawn.slick.state.StateBasedGame;
 /**
  * Created by Mazek on 2016-03-18.
  */
+
 public class GUI {
+
     public Life_bar lifeBar;
     public Mana_bar manaBar;
 

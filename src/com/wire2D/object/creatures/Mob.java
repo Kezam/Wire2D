@@ -17,9 +17,9 @@ public class Mob extends Base {
 
     ArrayList<Item> content;
 
-    public Mob() {
+    public Mob(Vector2f vector) {
         mImage = Resource.getSpriteImage("chicken", 0, 0);
-        position = new Vector2f();
+        position = vector;
         punkt = new Circle(position.getX(), position.getY(), 1);
         statistics = new Statistics(100,10,10,7,10,10);
 

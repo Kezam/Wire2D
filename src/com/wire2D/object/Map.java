@@ -6,6 +6,7 @@ import com.wire2D.object.creatures.Player;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -16,8 +17,9 @@ public class Map {
     public TiledMap map;
 
     public Player mPlayer;
-    public Mob chicken;
-    public Chest chest;
+
+    public ArrayList<Mob> mobs;
+    public ArrayList<Chest> chests;
 
     public ArrayList<Box> mBox;
 
@@ -25,18 +27,19 @@ public class Map {
 
         map = new TiledMap("res/map/" + path + ".tmx", "res/map");
 
+        mobs = new ArrayList<>();
+        chests = new ArrayList<>();
+
         mPlayer = new Player();
-        chicken = new Mob();
-        chest = new Chest();
+
+        mobs.add(new Mob(new Vector2f(20 * 32, 15 * 32)));
+        chests.add(new Chest(new Vector2f(25 * 32, 15 * 32)));
 
         int objectLayer = map.getLayerIndex("enter_block");
         mBox = new ArrayList<Box>();
-
         mBox = fillArrayBox(map, objectLayer, mPlayer);
 
         mPlayer.position.set(16 * 32, 15 * 32);
-        chicken.position.set(20 * 32, 15 * 32);
-        chest.position.set(25 * 32, 15 * 32);
     }
 
     public void changemap(String path, int index) throws SlickException {
@@ -66,23 +69,32 @@ public class Map {
 
     }
 
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+    public void render(GameContainer gc, StateBasedGame s, Graphics g) throws SlickException {
 
         map.render(0, 0);
-
-        mPlayer.render(gc, sbg, g);
-        chicken.render(gc, sbg, g);
-        chest.render(gc, sbg, g);
+        mPlayer.render(gc, s, g);
+        
+        for (Mob mob : mobs) {
+            mob.render(gc, s, g);
+        }
+        for (Chest chest : chests) {
+            chest.render(gc, s, g);
+        }
 
         for (Box xD : mBox) {
-            xD.render(gc, sbg, g, mPlayer.punkt);
+            xD.render(gc, s, g, mPlayer.punkt);
         }
     }
 
     public void update(GameContainer gc, StateBasedGame s, int i) throws SlickException {
         mPlayer.update(gc, s, i);
-        chicken.update(gc, s, i);
-        chest.update(gc, s, i);
+
+        for (Mob mob : mobs) {
+            mob.update(gc, s, i);
+        }
+        for (Chest chest : chests) {
+            chest.update(gc, s, i);
+        }
     }
 
     private ArrayList<Box> fillArrayBox(TiledMap map, int objectLayer, Player player) {
