@@ -14,7 +14,8 @@ public class ShopWindow {
     private Image buyButton;
     private Image tradeButton;
 
-    public void ShopWindow() throws SlickException {
+    public ShopWindow() throws  SlickException{
+        //nie używaj void
         this.mainWindow = new Rectangle(240, 660, 10, 10);
         this.sellButton = new Image("res/menu/shop_buttons/sellShop.png");
         this.buyButton = new Image("res/menu/shop_buttons/buyShop.png");
