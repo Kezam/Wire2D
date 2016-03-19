@@ -14,15 +14,19 @@ public class GUI {
 
     public Life_bar lifeBar;
     public Mana_bar manaBar;
+    //to ponizej do usunięcia
+    public ShopWindow shopWindow;
 
     public GUI(Statistics stats){
         this.lifeBar = new Life_bar(stats.aHealth, stats.maxHealth);
         this.manaBar = new Mana_bar(stats.aMana, stats.maxMana);
+        this.shopWindow = new ShopWindow();
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         lifeBar.render(gc, sbg, g);
         manaBar.render(gc, sbg, g);
+        shopWindow.render(gc, sbg, g);
     }
 
     public void update(GameContainer gc, StateBasedGame s, int i, Statistics stats) throws SlickException {
