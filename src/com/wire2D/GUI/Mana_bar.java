@@ -13,6 +13,7 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 
 public class Mana_bar {
+
     private float mana;
     private Rectangle manaBar;
     private Rectangle manaBar_frame;

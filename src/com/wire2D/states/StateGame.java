@@ -2,6 +2,7 @@ package com.wire2D.states;
 
 import com.wire2D.GUI.GUI;
 import com.wire2D.object.Map;
+import com.wire2D.operations.Interaction;
 import com.wire2D.operations.Movement;
 import com.wire2D.utis.States;
 import org.newdawn.slick.GameContainer;
@@ -20,6 +21,7 @@ public class StateGame extends BasicGameState {
     public Map ObjectMap;
     public Movement Ctrl_mov;
     public GUI GUI;
+    public Interaction action;
 
     @Override
     public int getID() {
@@ -32,13 +34,15 @@ public class StateGame extends BasicGameState {
         ObjectMap = new Map("shop_place");
         Ctrl_mov = new Movement(ObjectMap.mPlayer);
         GUI = new GUI(ObjectMap.mPlayer.statistics);
+        action = new Interaction();
     }
 
     @Override
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+    public void render(GameContainer gc, StateBasedGame s, Graphics g) throws SlickException {
 
-        ObjectMap.render(gc, sbg, g);
-        GUI.render(gc, sbg, g);
+        ObjectMap.render(gc, s, g);
+        GUI.render(gc, s, g);
+        action.render(gc, s, g);
     }
 
     @Override
@@ -51,5 +55,6 @@ public class StateGame extends BasicGameState {
         ObjectMap.update(gc, s, i);
         Ctrl_mov.update(gc, s, i, ObjectMap);
         GUI.update(gc, s, i, ObjectMap.mPlayer.statistics);
+        action.update(gc, s, i);
     }
 }
